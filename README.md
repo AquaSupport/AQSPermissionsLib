@@ -18,6 +18,8 @@ Just do as following to ask the permission to access to the camera roll,
 }];
 ```
 
+<img src="https://raw.githubusercontent.com/AquaSupport/AQSPermissionsLib/master/SS_1.png" width="240px" />
+
 After that, you can use same code to check the permission. 
 
 Or if you just check whether the access has granted (with no blocks),
@@ -27,6 +29,25 @@ BOOL permission = [AQSPermissions checkCameraRollPermission];
 ```
 
 Keep in mind `- checkCameraRollPermission` returns `NO` if you have not ask the permission.
+
+Some Trivia
+---
+
+You can add a usage description to the permission asking, like following
+
+<img src="https://raw.githubusercontent.com/AquaSupport/AQSPermissionsLib/master/SS_2.png" width="240px" />
+
+To do that, simply add key: `NSPhotoLibraryUsageDescription` with string value to the `<appname>-Info.plist`. To localize, edit `InfoPlist.strings` as following.
+
+It might improve the approval rate.
+
+```
+NSCameraUsageDescription = "I want to access your photos.";
+```
+
+#### Reference
+
+- [Cocoa Keys](https://developer.apple.com/library/ios/documentation/general/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html)
 
 LICENSE
 ---
