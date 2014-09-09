@@ -1,6 +1,8 @@
 AQSPermissionsLib
 =================
 
+![](http://img.shields.io/cocoapods/v/AQSPermissionsLib.svg?style=flat)
+
 Handle permission concerns without headache!
 
 Photo Library
@@ -29,6 +31,13 @@ BOOL permission = [AQSPermissions checkPhotoLibraryPermission];
 ```
 
 Keep in mind `- checkPhotoLibraryPermission` returns `NO` if you have not ask the permission.
+
+Installation
+---
+
+`pod 'AQSPermissionsLib'`
+
+and import `AQSPermissions.h` to start using!
 
 Some Trivia
 ---
