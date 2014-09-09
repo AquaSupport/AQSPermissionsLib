@@ -33,7 +33,9 @@ Keep in mind `- checkCameraRollPermission` returns `NO` if you have not ask the 
 Some Trivia
 ---
 
-You can add a usage description to the permission asking, like following
+### Add an usage description
+
+You can add an usage description to the permission asking, like following
 
 <img src="https://raw.githubusercontent.com/AquaSupport/AQSPermissionsLib/master/SS_2.png" width="240px" />
 
@@ -44,6 +46,12 @@ It might improve the approval rate.
 ```
 NSCameraUsageDescription = "I want to access your photos.";
 ```
+
+### Want to be asked the permission many times for testing.
+
+Just change your App's Bundle Identifier like `org.openaquamarine.PermissionsLib` to `org.openaquamarix.PermissionsLib`.
+
+iOS will recognize them as different apps.
 
 #### Reference
 
