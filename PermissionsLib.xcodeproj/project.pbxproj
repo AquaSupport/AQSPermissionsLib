@@ -21,6 +21,7 @@
 		D403D09419BF3258004ABA5B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D403D07619BF3258004ABA5B /* UIKit.framework */; };
 		D403D09C19BF3258004ABA5B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D403D09A19BF3258004ABA5B /* InfoPlist.strings */; };
 		D403D09E19BF3258004ABA5B /* PermissionsLibTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D403D09D19BF3258004ABA5B /* PermissionsLibTests.m */; };
+		D403D0AA19BF32E5004ABA5B /* AQSPermissions.m in Sources */ = {isa = PBXBuildFile; fileRef = D403D0A919BF32E5004ABA5B /* AQSPermissions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		D403D09919BF3258004ABA5B /* PermissionsLibTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PermissionsLibTests-Info.plist"; sourceTree = "<group>"; };
 		D403D09B19BF3258004ABA5B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D403D09D19BF3258004ABA5B /* PermissionsLibTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PermissionsLibTests.m; sourceTree = "<group>"; };
+		D403D0A819BF32E5004ABA5B /* AQSPermissions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQSPermissions.h; sourceTree = "<group>"; };
+		D403D0A919BF32E5004ABA5B /* AQSPermissions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQSPermissions.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,7 @@
 		D403D07819BF3258004ABA5B /* PermissionsLib */ = {
 			isa = PBXGroup;
 			children = (
+				D403D0A719BF32CE004ABA5B /* Classes */,
 				D403D08119BF3258004ABA5B /* AQSAppDelegate.h */,
 				D403D08219BF3258004ABA5B /* AQSAppDelegate.m */,
 				D403D08419BF3258004ABA5B /* Main.storyboard */,
@@ -150,6 +154,15 @@
 				D403D09A19BF3258004ABA5B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D403D0A719BF32CE004ABA5B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D403D0A819BF32E5004ABA5B /* AQSPermissions.h */,
+				D403D0A919BF32E5004ABA5B /* AQSPermissions.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D403D0AA19BF32E5004ABA5B /* AQSPermissions.m in Sources */,
 				D403D08319BF3258004ABA5B /* AQSAppDelegate.m in Sources */,
 				D403D07F19BF3258004ABA5B /* main.m in Sources */,
 				D403D08919BF3258004ABA5B /* AQSViewController.m in Sources */,

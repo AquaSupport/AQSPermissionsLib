@@ -8,6 +8,8 @@
 
 #import "AQSViewController.h"
 
+#import "AQSPermissions.h"
+
 @interface AQSViewController ()
 
 @end
@@ -17,6 +19,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [AQSPermissions askCameraRollPermissionWithBlock:^(BOOL permission) {
+        NSLog(@"%hhd", permission);
+        
+        NSLog(@"%hhd", [AQSPermissions checkCameraRollPermission]);
+    }];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
