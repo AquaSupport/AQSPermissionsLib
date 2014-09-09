@@ -3,7 +3,7 @@
 //  PermissionsLib
 //
 //  Created by kaiinui on 2014/09/09.
-//  Copyright (c) 2014年 Aquamarine. All rights reserved.
+//  Copyright (c) 2014 Aquamarine. All rights reserved.
 //
 
 #import "AQSPermissions.h"
@@ -13,7 +13,7 @@
 
 @implementation AQSPermissions
 
-# pragma mark - CameraRoll
+# pragma mark - Camera Roll
 
 + (void)askCameraRollPermissionWithBlock:(void (^)(BOOL permission))block {
     if ([self hasCameraRollPermissionChecked]) {
@@ -33,7 +33,7 @@
     return ([ALAssetsLibrary authorizationStatus] == ALAuthorizationStatusAuthorized);
 }
 
-# pragma mark - Helpers (CameraRoll)
+# pragma mark - Helpers (Camera Roll)
 
 + (BOOL)hasCameraRollPermissionChecked {
     return ([ALAssetsLibrary authorizationStatus] != ALAuthorizationStatusNotDetermined);

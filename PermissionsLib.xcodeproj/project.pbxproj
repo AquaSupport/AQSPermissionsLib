@@ -56,6 +56,7 @@
 		D403D09D19BF3258004ABA5B /* PermissionsLibTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PermissionsLibTests.m; sourceTree = "<group>"; };
 		D403D0A819BF32E5004ABA5B /* AQSPermissions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQSPermissions.h; sourceTree = "<group>"; };
 		D403D0A919BF32E5004ABA5B /* AQSPermissions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQSPermissions.m; sourceTree = "<group>"; };
+		D403D0AE19BF3BFD004ABA5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +294,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				D403D07C19BF3258004ABA5B /* en */,
+				D403D0AE19BF3BFD004ABA5B /* Base */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
