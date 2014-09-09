@@ -15,9 +15,9 @@
 
 # pragma mark - Camera Roll
 
-+ (void)askCameraRollPermissionWithBlock:(void (^)(BOOL permission))block {
-    if ([self hasCameraRollPermissionChecked]) {
-        block([self checkCameraRollPermission]);
++ (void)askPhotoLibraryPermissionWithBlock:(void (^)(BOOL permission))block {
+    if ([self hasPhotoLibraryPermissionChecked]) {
+        block([self checkPhotoLibraryPermission]);
         return;
     }
     ALAssetsLibrary *assetsLibrary = [[ALAssetsLibrary alloc] init];
@@ -29,13 +29,13 @@
     }];
 }
 
-+ (BOOL)checkCameraRollPermission {
++ (BOOL)checkPhotoLibraryPermission {
     return ([ALAssetsLibrary authorizationStatus] == ALAuthorizationStatusAuthorized);
 }
 
 # pragma mark - Helpers (Camera Roll)
 
-+ (BOOL)hasCameraRollPermissionChecked {
++ (BOOL)hasPhotoLibraryPermissionChecked {
     return ([ALAssetsLibrary authorizationStatus] != ALAuthorizationStatusNotDetermined);
 }
 

@@ -20,10 +20,10 @@
 {
     [super viewDidLoad];
     
-    [AQSPermissions askCameraRollPermissionWithBlock:^(BOOL permission) {
+    [AQSPermissions askPhotoLibraryPermissionWithBlock:^(BOOL permission) {
         NSLog(@"%hhd", permission);
         
-        NSLog(@"%hhd", [AQSPermissions checkCameraRollPermission]);
+        NSLog(@"%hhd", [AQSPermissions checkPhotoLibraryPermission]);
     }];
 	// Do any additional setup after loading the view, typically from a nib.
 }
