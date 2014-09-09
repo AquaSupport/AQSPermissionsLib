@@ -3,13 +3,13 @@ AQSPermissionsLib
 
 Handle permission concerns without headache!
 
-Camera Roll
+Photo Library
 ---
 
-Just do as following to ask the permission to access to the camera roll,
+Just do as following to ask the permission to access to the Photo Library,
 
 ```objc
-[AQSPermissions askCameraRollPermissionWithBlock:^(BOOL permission) {
+[AQSPermissions askPhotoLibraryPermissionWithBlock:^(BOOL permission) {
 	if (permission) {
 		NSLog(@"Yay! The permission has granted.");
 	} else {
@@ -25,10 +25,10 @@ After that, you can use same code to check the permission.
 Or if you just check whether the access has granted (with no blocks),
 
 ```objc
-BOOL permission = [AQSPermissions checkCameraRollPermission];
+BOOL permission = [AQSPermissions checkPhotoLibraryPermission];
 ```
 
-Keep in mind `- checkCameraRollPermission` returns `NO` if you have not ask the permission.
+Keep in mind `- checkPhotoLibraryPermission` returns `NO` if you have not ask the permission.
 
 Some Trivia
 ---
