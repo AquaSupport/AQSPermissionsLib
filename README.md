@@ -1,5 +1,4 @@
-AQSPermissionsLib
-=================
+<img src="https://dl.dropboxusercontent.com/u/7817937/_github/logo.png" width="500px" alt="AQSPermissionsLib" />
 
 ![](http://img.shields.io/cocoapods/v/AQSPermissionsLib.svg?style=flat)
 
