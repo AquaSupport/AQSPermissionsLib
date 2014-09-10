@@ -4,7 +4,7 @@
 
 Handle permission concerns without headache!
 
-Photo Library
+<img src="https://dl.dropboxusercontent.com/u/7817937/_github/AQSPermissionsLib/PhotoLibrary.png" width="42px" valign="bottom" /> Photo Library
 ---
 
 Just do as following to ask the permission to access to the Photo Library,
