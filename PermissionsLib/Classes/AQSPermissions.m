@@ -33,6 +33,10 @@
     return ([ALAssetsLibrary authorizationStatus] == ALAuthorizationStatusAuthorized);
 }
 
++ (BOOL)isPhotoLibraryPermissionDenied {
+    return ([ALAssetsLibrary authorizationStatus] == ALAuthorizationStatusDenied);
+}
+
 # pragma mark - Helpers (Camera Roll)
 
 + (BOOL)hasPhotoLibraryPermissionChecked {
