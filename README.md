@@ -1,15 +1,16 @@
-AQSPermissionsLib
-=================
+<img src="https://dl.dropboxusercontent.com/u/7817937/_github/logo.png" width="500px" alt="AQSPermissionsLib" />
+
+![](http://img.shields.io/cocoapods/v/AQSPermissionsLib.svg?style=flat)
 
 Handle permission concerns without headache!
 
-Camera Roll
+<img src="https://dl.dropboxusercontent.com/u/7817937/_github/AQSPermissionsLib/PhotoLibrary.png" width="42px" valign="bottom" /> Photo Library
 ---
 
-Just do as following to ask the permission to access to the camera roll,
+Just do as following to ask the permission to access to the Photo Library,
 
 ```objc
-[AQSPermissions askCameraRollPermissionWithBlock:^(BOOL permission) {
+[AQSPermissions askPhotoLibraryPermissionWithBlock:^(BOOL permission) {
 	if (permission) {
 		NSLog(@"Yay! The permission has granted.");
 	} else {
@@ -20,15 +21,52 @@ Just do as following to ask the permission to access to the camera roll,
 
 <img src="https://raw.githubusercontent.com/AquaSupport/AQSPermissionsLib/master/SS_1.png" width="240px" />
 
-After that, you can use same code to check the permission. 
+`- askPhotoLibraryPermissionWithBlock:` does not do any work if the permission is already granted / declined (just call the block with current permission.), so you do not need to check if the permission is already checked before calling this method.
+
+The following code works nice.
+
+```objc
+// XXPrePermissionViewController.m
+
+// In view, show a button and some tutorial.
+
+- (IBAction)didPushAskPermissionButton:(id)sender {
+    [AQSPermissions askPhotoLibraryPermissionWithBlock:^(BOOL permission) {
+        if (permission) {
+            // Go to the main view.
+        } else {
+            // Show some help to turn on the permission.
+        }
+    }];
+}
+```
+
+This code works as following.
+
+1. If a user runs the app at first
+  1. Show the view.
+  2. (the user taps the button.)
+  3. iOS asks the permission
+  4. -> Show main view if the permission granted.
+  5. -> Show helps if the permission declined.
+2. The user has run the app already.
+  1. -> Show main view if the permission granted.
+  2. -> Show helps if the permission declined.
 
 Or if you just check whether the access has granted (with no blocks),
 
 ```objc
-BOOL permission = [AQSPermissions checkCameraRollPermission];
+BOOL permission = [AQSPermissions checkPhotoLibraryPermission];
 ```
 
-Keep in mind `- checkCameraRollPermission` returns `NO` if you have not ask the permission.
+Keep in mind `- checkPhotoLibraryPermission` returns `NO` if you have not ask the permission.
+
+Installation
+---
+
+`pod 'AQSPermissionsLib'`
+
+and import `AQSPermissions.h` to start using!
 
 Some Trivia
 ---
