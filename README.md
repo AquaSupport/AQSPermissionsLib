@@ -61,6 +61,17 @@ BOOL permission = [AQSPermissions checkPhotoLibraryPermission];
 
 Keep in mind `- checkPhotoLibraryPermission` returns `NO` if you have not ask the permission.
 
+DEBUG mode
+---
+
+`#define AQSPERM_ASK_ALWAYS` in your `.pch` emulates permission asking alert as follows.
+
+![](http://i.gyazo.com/6e348a72525932a52c97f48831b4bf97.png)
+
+`#define AQSPERM_EMULATE_DENIED` in your `.pch` emulates denied permission.
+
+You don't need to change your codes. (Except of `.pch` header.)
+
 Installation
 ---
 
