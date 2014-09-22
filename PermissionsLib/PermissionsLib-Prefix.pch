@@ -4,6 +4,8 @@
 //  The contents of this file are implicitly included at the beginning of every source file.
 //
 
+#define AQSPERM_ASK_ALWAYS
+
 #import <Availability.h>
 
 #ifndef __IPHONE_5_0

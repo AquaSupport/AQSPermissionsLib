@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5BC8C840AF540AB66C66CEF8 /* libPods-PermissionsLibTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD36405ED0F00E46072BCE25 /* libPods-PermissionsLibTests.a */; };
 		D403D07319BF3258004ABA5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D403D07219BF3258004ABA5B /* Foundation.framework */; };
 		D403D07519BF3258004ABA5B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D403D07419BF3258004ABA5B /* CoreGraphics.framework */; };
 		D403D07719BF3258004ABA5B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D403D07619BF3258004ABA5B /* UIKit.framework */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		23D267B5E585D5288C618B9E /* Pods-PermissionsLibTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PermissionsLibTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PermissionsLibTests/Pods-PermissionsLibTests.release.xcconfig"; sourceTree = "<group>"; };
+		30D1BA6DB728DC4F4FCCCE41 /* Pods-PermissionsLibTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PermissionsLibTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PermissionsLibTests/Pods-PermissionsLibTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D403D06F19BF3258004ABA5B /* PermissionsLib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PermissionsLib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D403D07219BF3258004ABA5B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D403D07419BF3258004ABA5B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -57,6 +60,7 @@
 		D403D0A819BF32E5004ABA5B /* AQSPermissions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQSPermissions.h; sourceTree = "<group>"; };
 		D403D0A919BF32E5004ABA5B /* AQSPermissions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQSPermissions.m; sourceTree = "<group>"; };
 		D403D0AE19BF3BFD004ABA5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DD36405ED0F00E46072BCE25 /* libPods-PermissionsLibTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PermissionsLibTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +81,22 @@
 				D403D09219BF3258004ABA5B /* XCTest.framework in Frameworks */,
 				D403D09419BF3258004ABA5B /* UIKit.framework in Frameworks */,
 				D403D09319BF3258004ABA5B /* Foundation.framework in Frameworks */,
+				5BC8C840AF540AB66C66CEF8 /* libPods-PermissionsLibTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		407D109028C6320FE3896F62 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				30D1BA6DB728DC4F4FCCCE41 /* Pods-PermissionsLibTests.debug.xcconfig */,
+				23D267B5E585D5288C618B9E /* Pods-PermissionsLibTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D403D06619BF3258004ABA5B = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +104,7 @@
 				D403D09719BF3258004ABA5B /* PermissionsLibTests */,
 				D403D07119BF3258004ABA5B /* Frameworks */,
 				D403D07019BF3258004ABA5B /* Products */,
+				407D109028C6320FE3896F62 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +124,7 @@
 				D403D07419BF3258004ABA5B /* CoreGraphics.framework */,
 				D403D07619BF3258004ABA5B /* UIKit.framework */,
 				D403D09119BF3258004ABA5B /* XCTest.framework */,
+				DD36405ED0F00E46072BCE25 /* libPods-PermissionsLibTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -190,9 +206,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D403D0A419BF3258004ABA5B /* Build configuration list for PBXNativeTarget "PermissionsLibTests" */;
 			buildPhases = (
+				7983BD95F9C2B8BA88A7730F /* Check Pods Manifest.lock */,
 				D403D08C19BF3258004ABA5B /* Sources */,
 				D403D08D19BF3258004ABA5B /* Frameworks */,
 				D403D08E19BF3258004ABA5B /* Resources */,
+				49A4F1DB44BDF417DFDD65CC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -258,6 +276,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		49A4F1DB44BDF417DFDD65CC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PermissionsLibTests/Pods-PermissionsLibTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7983BD95F9C2B8BA88A7730F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D403D06B19BF3258004ABA5B /* Sources */ = {
@@ -395,6 +446,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PermissionsLib/PermissionsLib-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = "PermissionsLib/PermissionsLib-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -408,6 +463,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PermissionsLib/PermissionsLib-Prefix.pch";
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "";
 				INFOPLIST_FILE = "PermissionsLib/PermissionsLib-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -416,6 +472,7 @@
 		};
 		D403D0A519BF3258004ABA5B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30D1BA6DB728DC4F4FCCCE41 /* Pods-PermissionsLibTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PermissionsLib.app/PermissionsLib";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -438,6 +495,7 @@
 		};
 		D403D0A619BF3258004ABA5B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23D267B5E585D5288C618B9E /* Pods-PermissionsLibTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PermissionsLib.app/PermissionsLib";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -473,6 +531,7 @@
 				D403D0A319BF3258004ABA5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D403D0A419BF3258004ABA5B /* Build configuration list for PBXNativeTarget "PermissionsLibTests" */ = {
 			isa = XCConfigurationList;
@@ -481,6 +540,7 @@
 				D403D0A619BF3258004ABA5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

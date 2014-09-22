@@ -16,20 +16,20 @@
 
 @implementation AQSViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [AQSPermissions askPhotoLibraryPermissionWithBlock:^(BOOL permission) {
-        NSLog(@"%hhd", permission);
-        
-        NSLog(@"%hhd", [AQSPermissions checkPhotoLibraryPermission]);
-    }];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)viewDidAppear:(BOOL)animated {
+    [AQSPermissions askPhotoLibraryPermissionWithBlock:^(BOOL permission) {
+        NSLog(@"%d", permission);
+        
+        NSLog(@"%d", [AQSPermissions checkPhotoLibraryPermission]);
+    }];
+}
+
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
